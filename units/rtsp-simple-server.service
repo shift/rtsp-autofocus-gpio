@@ -1,0 +1,14 @@
+[Unit]
+Description=rtsp-simple-server
+Documentation=https://github.com/aler9/rtsp-simple-server
+After=network.target
+
+[Service]
+Restart=on-failure
+RestartPreventExitStatus=255
+Type=simple
+WorkingDirectory=/home/ubuntu
+ExecStart=/home/ubuntu/rtsp-simple-server
+
+[Install]
+WantedBy=multi-user.target

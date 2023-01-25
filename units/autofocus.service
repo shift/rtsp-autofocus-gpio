@@ -1,0 +1,14 @@
+[Unit]
+Description=autofocus
+Documentation=https://gist.github.com/shift/5b05620052918a52b1bcafac8a13f86a
+After=network.target
+
+[Service]
+Restart=on-failure
+RestartPreventExitStatus=255
+Type=simple
+WorkingDirectory=/home/ubuntu/autofocus
+ExecStart=/usr/bin/python3 autofocus.py
+
+[Install]
+WantedBy=multi-user.target
